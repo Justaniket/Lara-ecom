@@ -1,0 +1,1 @@
+<footer class="main-footer"><span class="copyrights-text">Copyright ©
