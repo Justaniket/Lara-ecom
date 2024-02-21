@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
-class AdminLoginController extends Controller
+class adminLogin_controller extends Controller
 {
     public function index(){
         return view("admin/admin_login");

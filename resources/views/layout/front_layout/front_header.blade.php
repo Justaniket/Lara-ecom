@@ -13,8 +13,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="3">
-                                Contact us
+                            <a class="nav-link" href="{{url('/category')}}">
+                                    <p>Category</p>
                             </a>
                         </li>
                         <li class="nav-item dropdown">
@@ -59,7 +59,7 @@
                             
                         </li>
                     </ul>
-                   <a href="/login"> <button class="btn btn-danger ml-3 border">Log in</button></a>
+                   <a href="/user_login"> <button class="btn btn-danger ml-3 border">Log in</button></a>
                 </div>
             </div>
         </nav>

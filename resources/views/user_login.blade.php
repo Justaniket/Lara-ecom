@@ -14,7 +14,9 @@
 </div>
     </div>
     <div class="eleven mt-4">
+      <a href="{{url('/')}}">
       <button type="button" class="btn btn-success">Log in</button>
+    </a>
     </div>
     <h6 class="ten">Or login with</h6>
     <div class="eight">

@@ -6,10 +6,10 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class home_controller extends Controller
 {
     public function out(){
-        //dd('test');
+        
       
         return view("admin/dashboard");
     }

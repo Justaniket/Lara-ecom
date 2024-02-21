@@ -14,7 +14,11 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Products</a>
       </li>
+     
     </ul>
+    <a href="{{url('admin/logout')}}">
+    <button class="btn btn-danger">logout</button>
+  </a>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">

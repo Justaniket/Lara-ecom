@@ -1,0 +1,27 @@
+/* Visual improvements. */
+body, html { 
+	margin: 20px 0; 
+	width: 100%; 
+	height: 100%; 
+	background: #56b968;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.container { 
+	max-width: 700px; 
+	margin: 0 auto 100px;
+}
+
+h1 { 
+	color: #fff;
+}
+
+h1 svg {
+	position: relative;
+	top: 20px;
+	margin-right: 10px;
+}
+
+.container .ck.ck-content {
+	padding: 0 1em;
+}
