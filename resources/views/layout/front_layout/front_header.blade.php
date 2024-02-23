@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light osahan-nav shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img alt="logo" src="img/logo.png">
+                    <img alt="logo" src="{{asset('img/logo.png')}}">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img alt="Generic placeholder image" src="img/user/4.png" class="nav-osahan-pic rounded-pill"> My Account </a>
+                                <img alt="Generic placeholder image" src="{{asset('img/user/4.png')}}" class="nav-osahan-pic rounded-pill"> My Account </a>
                             <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
                                 <a class="dropdown-item" href="orders.html#orders">
                                     <i class="icofont-food-cart"></i> Orders </a>
@@ -49,7 +49,7 @@
                                 <a class="dropdown-item" href="orders.html#payments">
                                     <i class="icofont-credit-card"></i> Payments </a>
                                 <a class="dropdown-item" href="orders.html#addresses">
-                                    <i class="icofont-location-pin"></i> Addresses </a>
+                                    <i class="icofont-location-pin"></i> Addresses  </a>
                             </div>
                         </li>
                         <li class="nav-item dropdown dropdown-cart">
@@ -59,7 +59,9 @@
                             
                         </li>
                     </ul>
-                   <a href="/user_login"> <button class="btn btn-danger ml-3 border">Log in</button></a>
+                    
+                   <a href="/user_login"> <button class="btn btn-danger ml-3 border">Login</button></a>
+
                 </div>
             </div>
         </nav>

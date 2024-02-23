@@ -13,6 +13,7 @@
         <link href="{{asset('vendor/icofont/icofont.min.css')}}" rel="stylesheet">
         <link href="{{asset('vendor/select2/css/select2.min.css')}}" rel="stylesheet">
         <link href="{{asset('css/osahan.css')}}" rel="stylesheet">
+        <link href="{{asset('css/style.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('vendor/owl-carousel/owl.carousel.css')}}">
         <link rel="stylesheet" href="{{asset('vendor/owl-carousel/owl.theme.css')}}">
     </head>

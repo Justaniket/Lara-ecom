@@ -21,7 +21,6 @@ class category_controller extends Controller
         // upload img
         $imagename=time(). '.'.$request->image->extension();
         $request->image->move(public_path('adminImages/category_images'), $imagename);
-
         $Category=new Category;
         $Category->name=$request['name'];
         $Category->image=$imagename;
@@ -57,10 +56,10 @@ public function edit($id)
 public function update(Request $request, $id)
 {
       $data=$request->all();
-       $request->validate([
-        'name' => 'required|string|max:255',
-        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-       ]);
+    //    $request->validate([
+    //     'name' => 'required|string|max:255',
+    //     'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+    //    ]);
       $category = Category::find($id);
       if (is_null($category)) {
         return redirect('admin/view_category');

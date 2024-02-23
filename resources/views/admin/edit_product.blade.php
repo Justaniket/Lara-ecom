@@ -25,7 +25,8 @@
             <label class="form-label">Category </label>
            
             <select class="form-select" aria-label="Default select example" name="category_id">
-              <option selected value="$Products->category"></option>
+             
+              <option selected value="{{$Products->category->id}}">{{$Products->category->name}}</option>
               @foreach($Category as $value)
               <option value="{{$value->id}}">{{$value->name}}</option>
             @endforeach

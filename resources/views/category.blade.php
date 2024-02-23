@@ -2,20 +2,27 @@
 
 @section('content')
 
-<div class="container d-flex mt-5 mb-5 col-md-10">
-    @foreach($categories as $value) 
-    @if($value->status == 1)
-   <div class="card mr-3  align-items-center;" style="width: 18rem;">
-       <img src="{{asset('adminImages/category_images/'.$value->image) }}" alt="Category Image" width="50" height="50">
-        <div class="card-body d-flex justify-content-center">
-          <p class="card-text">{{$value->name}}</p>
-           </div>
-        </div>
-        @endif
- @endforeach
-</div>
+<div class=" container  mb-4 pb-2 mt-3  d-flex" style="justify-content:space-evenly">
 
-@endsection('content')
+    @foreach($categories as $value)
+    @if($value->status == 1)
+  <div class="list-card bg-white h-200  rounded overflow-hidden position-relative shadow-sm mr-3 mt-3">
+    <div class="list-card-image">
+      <a href="{{url('/products_listing/'.$value->id)}}">
+        <img src="{{asset('adminImages/category_images/'.$value->image) }}" alt="Category Image" height="255" width="250"  >
+    </a>
+    </div>
+    <div class="p-3 position-relative">
+    <div class="list-card-body text-center border-top">
+   <a href="{{ url('/products_listing/'.$value->id) }}" class="text-black">{{$value->name}}</a>
+   </div>
+    </div>
+    </div>
+    @endif
+    @endforeach
+    </div>
+
+    @endsection('content')
 
 
 

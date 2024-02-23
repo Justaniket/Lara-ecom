@@ -12,4 +12,4 @@ class usercategory_controller extends Controller
      return view('/category', compact('categories'));
    }
 }
-   
+                   

@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 class home_controller extends Controller
 {
     public function out(){
-        
-      
-        return view("admin/dashboard");
+         return view("admin/dashboard");
     }
 
     public function logout(){

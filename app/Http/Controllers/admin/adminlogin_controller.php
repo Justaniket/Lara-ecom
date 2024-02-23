@@ -29,7 +29,7 @@ class adminLogin_controller extends Controller
             if($admin->role==2){
             return redirect()->route('admin.dashboard');
             }else{
-                $admin=Auth::guard('admin')->logout ();
+                $admin=Auth::guard('admin')->logout();
                 return redirect()->route('admin.login')->with ('error','you are not authorized
                  to access dashboard');
 

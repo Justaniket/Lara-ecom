@@ -92,10 +92,18 @@
      
     </tr>
     @endforeach
+    
   </tbody>
 </table>
+
   </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      {{ $Products->links() }}
+   </ul>
+  </nav>
 </div>
+
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.2.0

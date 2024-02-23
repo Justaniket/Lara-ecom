@@ -43,13 +43,8 @@ class product_controller extends Controller
 // display data on page
     public function viewProducts()
  {
-//  Join two tables
-//     $Products = Products::select('adminproducts.*','admincategory.name as catname')
-//         ->Join('admincategory','admincategory.id','adminproducts.category_id')
-//         ->orderBy('id','ASC')
-//         ->get();
-//  return view ('admin.view_products')->with(compact('Products'));
-$Products = Products::with('category')->orderBy('id', 'ASC')->get();
+  // joiin both admin table
+$Products = Products::with('category')->orderBy('id', 'ASC')->paginate(5);
 return view('admin.view_products')->with(compact('Products'));
  } 
 public function delete(Request $request, $id){
@@ -78,7 +73,7 @@ public function delete(Request $request, $id){
         $products->image = $imageName;
     }
     $products->name = $request->input('name');
-    $Products->category_id=$request->category_id;
+    $products->category_id=$request->category_id;
     $products->price=$request->input('price');
     $products->description=$request->input('description');
     $products->status = !empty($request['status']) ? 1 : 0;

@@ -1,27 +1,28 @@
 <?php
 
 namespace App\Http\Middleware;
-use Auth;
+
 use Closure;
+use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Illuminate\Http\Request;
-
-
-use Symfony\Component\HttpFoundation\Response;
 
 class AdminAuthenticate extends Middleware
 {
-  protected function redirectTo(Request $request): ?string
-  {
-    return $request->exceptsJason() ? null : route("admin/login");
-  }
-  protected function autheticate( $request, array $guards )
-  {
-    if ($this->Auth->guard('admin')->check()) {
-        return $this->Auth->shouldUse('admin');
-  }
-  $this->unauthenticated($request, ['admin']); 
+    protected function redirectTo($request): ?string
+    {
+        return $request->expectsJson() ? null : route("admin.login");
+    }
+
+    protected function authenticate($request, array $guards)
+    {
+        if ($this->auth->guard('admin')->check()) {
+            return $this->auth->shouldUse('admin');
+        }
+
+        $this->unauthenticated($request, ['admin']);
+    }
 }
-}
+
   
 
 
